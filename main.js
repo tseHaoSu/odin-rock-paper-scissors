@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   let humanScore = 0;
   let computerScore = 0;
+  let result = "";
   const rockButton = document.querySelector("#rock");
   const paperButton = document.querySelector("#paper");
   const scissorsButton = document.querySelector("#scissors");
   const humanScoreElement = document.querySelector("#humanScore");
   const computerScoreElement = document.querySelector("#computerScore");
+  const resultElement = document.querySelector("#result");
 
 //Function to get the computer choice
   const getComputerChoice = () => {
@@ -66,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     humanScoreElement.textContent = humanScore;
     computerScoreElement.textContent = computerScore;
+    resultElement.textContent = result;
   };
   rockButton.addEventListener("click", () => playGame("rock"));
   paperButton.addEventListener("click", () => playGame("paper"));
